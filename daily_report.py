@@ -22,6 +22,8 @@ def send_daily_report():
 
     # Send the email
     send_email_with_attachment(RECIPIENT_EMAIL, subject, body, report_filename)
+    # Remove the generated report file
+    os.remove(report_filename)
 
 
 if __name__ == "__main__":
